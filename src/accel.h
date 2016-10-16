@@ -4,8 +4,8 @@
 #define SELFTEST 12
 #define PIN 13
 
-double parseRawAccelerometer();
-double filter(double accel);
-double getVal();
+float parseRawAccelerometer();
+float filter(double accel);
+float getVal();
 
 #endif
