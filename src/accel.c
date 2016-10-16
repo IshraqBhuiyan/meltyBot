@@ -23,9 +23,10 @@ float getAngVel(float angVel[], float angAccel){
   return vel;
 }
 
-// angVel[] is an array of the last whatever amount of values since the last h0
-// h0 is the angular position of the accepted reference heading, which is just 0, ignore this for now
-// the float "dt" is the time in between each measurements,(hence the dt between each v in angVel[]), it is currently an arbitrary value
-float getHeading(float angVel[], float h0){
+// angVel is the angular velocity of the most recent measurement
+// angVelPrev is the angular velocity of the next most recent measurement
+// angle is the relative angle to the reference heading of the next most recent measurement
+// the float "dt" is the time in between each measurement,(hence the dt between angVel and angVelPrev), it is currently an arbitrary value
+float getHeading(float angVel, float angVelPrev, float angle){
   return 0.0f;
 }
