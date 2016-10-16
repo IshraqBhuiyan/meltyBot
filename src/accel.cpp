@@ -28,5 +28,11 @@ float getAngVel(float angVel[], float angAccel){
 // angle is the relative angle to the reference heading of the next most recent measurement
 // the float "dt" is the time in between each measurement,(hence the dt between angVel and angVelPrev), it is currently an arbitrary value
 float getHeading(float angVel, float angVelPrev, float angle){
-  return 0.0f;
+
+  double headingAngle=(angle + angVel*dt+((((angVel-angVelPrev)/dt)*(dt^2))/2));
+  if(headingAngle>=2*pi){
+    headingAngle=0;
+  }
+  
+   return headingangle;
 }
